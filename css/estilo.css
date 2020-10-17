@@ -1,0 +1,146 @@
+p{
+   
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#formas-pagamento{
+ color:red;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+
+.menu{
+    background-color: #ff0000;
+    padding: 10px;
+    font-size: 25px;
+     
+}
+
+#principal h2{
+    color: red;
+}
+
+#principal p{
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+#principal img{
+    margin-left: 400px;
+}
+
+
+
+header h2{
+    font-size: 30px;
+}
+
+
+.categorias{
+    width: 20%;
+    float:left;
+    background: white;
+}
+
+.categorias h3{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.categorias li{
+    padding: 10px;
+}
+
+.produtos{
+    width: 80%;
+    float: right;
+    height: auto;
+}
+
+.produtos .box_produto{
+    width: 24%;
+    float: left;
+    font-size: 15px;
+   margin: 5px;
+    text-align: center;
+    
+}
+
+#rodape{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.clear{
+    clear: both;
+}
+
+.produtos .box_produto .preco{
+    margin-top: -10px;
+    color: #ff0000;
+    font-size: 20px;
+}
+
+.produtos .box_produto .descricao-preco{
+    text-decoration:  line-through;
+}
+
+
+#rodape{
+    text-align: center;
+
+}
+/* ---------- FALE CONOSCO ----------- */
+
+#contato {
+    height: 100px;
+    padding-top: 30px;
+    font-size: 20px;
+    
+}
+
+#contato img{
+    margin-left: 300px;
+}
+
+#formulario  .msg{
+width: 400px;
+}
+
+#formulario .botao{
+    width: 80px;
+    border-radius: 20px;
+    background: red;
+    color: white;
+}
+
+#formulario h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#formulario{
+    padding-bottom: 50px;
+}
+
+/*----------------- LOJAS --------------------------*/
+
+
+#lojas .container{
+    width: 33%;
+    height: 330px;
+    float: left;
+    
+
+}
+
+.container h3{
+ font-weight: bold;
+ font-size: 25px;
+}
