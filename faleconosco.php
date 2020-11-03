@@ -1,3 +1,27 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "fseletro";
+
+$conn = mysqli_connect($servername,$username,$password,$database);
+
+if(!$conn){
+    die("Aconexão ao BD falhou: " . mysqli_connect_error());
+}
+
+if(isset($_POST['nome']) && isset($_POST['msg'])){
+
+    $nome = $_POST['nome'];
+    $msg = $_POST['msg'];
+
+   $sql = "insert into comentarios (nome, msg) values ('$nome','$msg')";
+   $result = $conn->query($sql);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -8,13 +32,10 @@
   
     <body>
            <!--Menu-->
-           <nav class="menu">
-            <a href="index.html"><img width="100px" src="./img/logo.jpeg" 
-                alt="Full stack eletro"></a>
-            <a href="produtos.html">Nossos Produtos</a>
-            <a href="loja.html">Nossas lojas</a>
-            <a href="faleconosco.html">Fale conosco</a>
-        </nav>
+      
+<?php
+  include_once('menu.html');
+?>
          <!-- Fim Menu-->
 
          <header>
@@ -34,15 +55,34 @@
         
      
         <section id="formulario">
-            <form>
+            <form method="post">
                 <h4>Nome: </h4>
-                <input class="msg" type="text" style="width: 400px;">
+                <input class="msg" name="nome" type="text" style="width: 400px;">
                 <h4>Mensagem: </h4>
-                <textarea class="msg"></textarea>
+                <textarea class="msg" name="msg"></textarea>
 
                 <input class="botao" type="submit" value="Enviar">
             </form>
         </section>
+
+
+        
+ <?php
+ $sql = "select * from comentarios";
+ $result = $conn->query($sql);
+ 
+ if ($result->num_rows>0){
+     while($rows = $result->fetch_assoc()){
+     echo "Data: ", $rows['data'],"<br>";
+     echo "Nome: ", $rows['nome'],"<br>";
+     echo "Mensagem: ", $rows['msg'],"<br>";
+     echo "<hr>";
+     }
+}
+else{
+  echo "Nenhum comentário ainda!";
+}
+ ?>
 
   
        <footer id="rodape">

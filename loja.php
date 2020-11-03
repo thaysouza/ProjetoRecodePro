@@ -8,13 +8,10 @@
   
     <body>
            <!--Menu-->
-        <nav class="menu">
-            <a href="index.html"><img width="100px" src="./img/logo.jpeg" 
-                alt="Full stack eletro"></a>
-            <a href="produtos.html">Nossos Produtos</a>
-            <a href="loja.html">Nossas lojas</a>
-            <a href="faleconosco.html">Fale conosco</a>
-        </nav>
+         
+<?php
+  include('menu.html');
+?>
          <!-- Fim Menu-->
          
          <header>
