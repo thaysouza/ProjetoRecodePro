@@ -6,7 +6,7 @@ function exibir_categoria(categoria){
         console.log(elementos[i].id);
   
         if(categoria == elementos[i].id)
-        elementos[i].style="display:block";
+        elementos[i].style="display:inline-block";
         else  
           elementos[i].style = "display:none";
     }
@@ -19,7 +19,7 @@ function exibir_categoria(categoria){
       for (var i=0; i<elementos.length; i++){
           console.log(elementos[i].id);
     
-          elementos[i].style="display:block";
+          elementos[i].style="display:inline-block";
        
       }
   
